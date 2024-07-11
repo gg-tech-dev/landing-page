@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 //@ts-ignore
 
 const technologies = [
-    { name: 'React', logo: 'logos/logo.svg' },
+    { name: 'React', logo: 'tech/react.svg' },
     { name: 'JavaScript', logo: 'logos/logo.svg' },
     { name: 'Node.js', logo: 'logos/logo.svg' },
     { name: 'HTML', logo: 'logos/logo.svg' },
@@ -50,7 +50,7 @@ export default  function TechSlider() {
         >
             {technologies.map((tech) => (
                 <SwiperSlide key={tech.name} className="flex justify-center items-center">
-                    <div className="bg-white shadow-md rounded-lg p-6">
+                    <div className="rounded-lg p-6">
                         <img src={tech.logo} alt={tech.name} className="h-16 w-16" />
                         <p className="mt-2 text-center">{tech.name}</p>
                     </div>
