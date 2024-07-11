@@ -1,0 +1,34 @@
+---
+import Container from "../shared/Container.astro";
+import Title from "../shared/Title.astro";
+import TechSlider from './tech'
+
+
+
+
+type ServicesProps = {
+    title: string;
+    description: string;
+    icon: string
+};
+
+
+---
+
+<script>
+    import 'swiper/css';
+</script>
+
+
+<section id="services">
+    <Container className="space-y-10 md:sapce-y-12">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <Title>
+                Our Technologies
+            </Title>
+        </div>
+        <div class="">
+           <TechSlider client:load />
+        </div>
+    </Container>
+</section>
