@@ -12,14 +12,25 @@ import { Autoplay } from 'swiper/modules';
 
 const technologies = [
     { name: 'React', logo: 'tech/react.svg' },
-    { name: 'JavaScript', logo: 'logos/logo.svg' },
-    { name: 'Node.js', logo: 'logos/logo.svg' },
-    { name: 'HTML', logo: 'logos/logo.svg' },
-    { name: 'CSS', logo: 'logos/logo.svg' },
-    { name: 'Sass', logo: 'logos/logo.svg' },
-    { name: 'MobX', logo: 'logos/logo.svg' },
-    { name: 'Vue.js', logo: 'logos/logo.svg' },
-    { name: 'Angular', logo: 'logos/logo.svg' },
+    { name: 'Node.js', logo: 'tech/node.svg' },
+    { name: 'JavaScript', logo: 'tech/js.svg' },
+    { name: 'TypeScript', logo: 'tech/ts.svg' },
+    { name: 'NestJS', logo: 'tech/nestjs.svg' },
+    { name: 'Mongo', logo: 'tech/mongo.svg' },
+    { name: 'MySql', logo: 'tech/mysql.svg' },
+    { name: 'Postgres', logo: 'tech/postgres.svg' },
+    { name: 'Nx', logo: 'tech/nx.jpeg' },
+    { name: 'HTML', logo: 'tech/html.svg' },
+    { name: 'CSS', logo: 'tech/css.svg' },
+    { name: 'Sass', logo: 'tech/sass.svg' },
+    { name: 'MobX', logo: 'tech/mobx.svg' },
+    // { name: 'Vue.js', logo: 'tech/vue.svg' },
+    // { name: 'Angular', logo: 'tech/angular.svg' },
+    { name: 'NextJS', logo: 'tech/next-js.svg' },
+    { name: 'Tailwind', logo: 'tech/tailwind.svg' },
+    { name: 'Ant Design', logo: 'tech/antd.svg' },
+    // { name: 'ShadnCdn', logo: 'tech/angular.svg' },
+    // { name: 'Radix', logo: 'tech/angular.svg' },
     // Add more technologies as needed
 ];
 
@@ -29,7 +40,7 @@ export default  function TechSlider() {
             modules={[Autoplay]}
             spaceBetween={30}
             loop={true}
-            autoplay={{delay: 3000, waitForTransition: true}}
+            autoplay={{delay: 1000, waitForTransition: true}}
             breakpoints={{
                 320: {
                     slidesPerView: 2,
