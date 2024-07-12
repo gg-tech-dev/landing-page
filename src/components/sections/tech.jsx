@@ -39,28 +39,29 @@ export default  function TechSlider() {
 
     return (
         <Swiper
+            key={isReady}
             style={{display: isReady ?  '' : 'none'}}
             onInit={() => setReady(true)}
             modules={[Autoplay]}
             spaceBetween={30}
-            loop={true}
+            loop={isReady}
             autoplay={{delay: 1000, waitForTransition: true}}
             breakpoints={{
                 320: {
                     slidesPerView: 2,
-                    spaceBetween: 20,
+                    spaceBetween: 30,
                 },
                 640: {
                     slidesPerView: 2,
-                    spaceBetween: 20,
+                    spaceBetween: 30,
                 },
                 768: {
                     slidesPerView: 4,
-                    spaceBetween: 40,
+                    spaceBetween: 30,
                 },
                 1024: {
                     slidesPerView: 6,
-                    spaceBetween: 50,
+                    spaceBetween: 30,
                 },
             }}
             navigation
