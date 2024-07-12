@@ -1,5 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
 // import 'swiper/swiper.min.css';
@@ -25,7 +26,10 @@ const technologies = [
 export default  function TechSlider() {
     return (
         <Swiper
+            modules={[Autoplay]}
             spaceBetween={30}
+            loop={true}
+            autoplay={{delay: 3000, waitForTransition: true}}
             breakpoints={{
                 320: {
                     slidesPerView: 2,
@@ -52,7 +56,7 @@ export default  function TechSlider() {
                 <SwiperSlide key={tech.name} className="flex justify-center items-center">
                     <div className="rounded-lg p-6">
                         <img src={tech.logo} alt={tech.name} className="h-16 w-16" />
-                        <p className="mt-2 text-center">{tech.name}</p>
+                        <p className="mt-2 text-center dark:text-amber-50">{tech.name}</p>
                     </div>
                 </SwiperSlide>
             ))}
