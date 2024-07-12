@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
@@ -35,8 +35,12 @@ const technologies = [
 ];
 
 export default  function TechSlider() {
+    const [isReady, setReady] = useState(false);
+
     return (
         <Swiper
+            style={{display: isReady ?  '' : 'none'}}
+            onInit={() => setReady(true)}
             modules={[Autoplay]}
             spaceBetween={30}
             loop={true}
