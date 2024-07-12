@@ -6,7 +6,7 @@ const SellingPoint = () => {
                     <h2 className="text-base font-semibold tracking-wide text-indigo-600 uppercase">Fullstack
                         Development Experts</h2>
                     <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight dark:text-amber-50 text-gray-900 sm:text-4xl">
-                        Hiring a Senior Developer Takes 2-4 Months. With Us, It Takes Just One Call.
+                        Hiring a Developer Takes 2-4 Months On Average. With Us, It Takes Just One Call.
                     </p>
                     <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
                         Get An Edge Over Your Competitors.
