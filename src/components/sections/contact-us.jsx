@@ -74,7 +74,6 @@ const ContactUs = () => {
                                 </div>
                             </form>
                         </div>
-                    )
                         <div id='form-thanks' className="hidden text-center">
                             <h3 className="dark:text-amber-50 text-xl font-semibold text-gray-900">Thank You!</h3>
                             <p className="dark:text-amber-50 mt-4 text-lg text-gray-700">We have received your message and will get back to you shortly.</p>
