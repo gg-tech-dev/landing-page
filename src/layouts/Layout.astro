@@ -111,6 +111,37 @@ const { title } = Astro.props;
       });
     }
   </script>
+  <script type="application/javascript">
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      console.log(event)
+
+       document.getElementById('contact-form').classList.add('hidden');
+
+      const formData = new FormData(event.target);
+      const formObject = Object.fromEntries(formData);
+
+      fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer re_hKPokDjv_HHu2gQ8xSKYW98txUAoEi2kz',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          from: 'landing@gg-tech.dev',
+          to: ['stolenng@gmail.com'],
+          subject: 'ggTech - New Contact',
+          text: `${JSON.stringify(formObject)}`,
+          headers: {
+            'X-Entity-Ref-ID': '123'
+          },
+        })
+      });
+
+     document.getElementById('form-thanks').classList.remove('hidden');
+    })
+  </script>
 </html>
 <style is:global>
   :root {
